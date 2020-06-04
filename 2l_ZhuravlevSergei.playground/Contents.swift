@@ -8,6 +8,8 @@ func isEven(num: Int) -> Bool {
     }
 }
 
+print("Задание 1:\n\(isEven(num: 76))\n")
+
 func isDividedByThree (num: Int) -> Bool {
     if num % 3 == 0 {
         return true
@@ -15,6 +17,8 @@ func isDividedByThree (num: Int) -> Bool {
         return false
     }
 }
+
+print("Задание 2:\n\(isDividedByThree(num: 8))\n")
 
 func arrayOfHundredNumbers ( num: Int) -> [Int] {
     var arr = [Int]()
@@ -30,6 +34,8 @@ func arrayOfHundredNumbers ( num: Int) -> [Int] {
 
 var arrayIncreasing = arrayOfHundredNumbers(num: 32)
 
+print("Задание 3:\n\(arrayIncreasing)\n")
+
 func removeEvensAndDividedByThree (array: inout [Int]) -> [Int] {
     for (_, value) in array.enumerated() {
         if (isEven(num: value) || isDividedByThree(num: value)) {
@@ -39,14 +45,17 @@ func removeEvensAndDividedByThree (array: inout [Int]) -> [Int] {
     return array
 }
 
+print("Задание 4:\n\(removeEvensAndDividedByThree(array: &arrayIncreasing))\n")
+
 func createFibonacciArray (num1: Double, num2: Double) -> [Double] {
     var array: [Double] = [num1, num2]
-    print(array.count)
     while array.count < 100 {
         array.append(array[array.count-1] + array[array.count-2])
     }
     return array
 }
+
+print("Задание 5:\n\(createFibonacciArray(num1: 1, num2: 2))\n")
 
 func primeNumbers(arraySize: Int) -> [Int] {
     var array: [Int] = [2]
@@ -70,4 +79,4 @@ func primeNumbers(arraySize: Int) -> [Int] {
     return array
 }
 
-print(primeNumbers(arraySize: 100))
+print("Задание 6:\n\(primeNumbers(arraySize: 100))\n")
